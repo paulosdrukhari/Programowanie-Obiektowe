@@ -214,8 +214,55 @@ public class Main {
     }
 }
 zad 2.1 b
-zad 2.1 c
+import java.util.Scanner;
 
+public class Main {
+
+    public static void main(String[] args) {
+        double suma=0;
+        Scanner scan = new Scanner(System.in);
+        int number = scan.nextInt();
+        for (int i=0;i < number ; i++)
+        {
+            double n = scan.nextInt();
+            if(n%3==0&&n%5!=0)
+            {
+                suma++;
+            }
+        }
+        System.out.println(suma );
+    }
+}
+zad 2.1 c
+import java.util.Scanner;
+
+public class Main {
+     public static int kwa(int n) {
+        int iloczyn = 1;
+        for(int i = 1; i < n; i++) {
+            if(Math.pow(i,2)==n)
+            {
+                return 1;
+            }
+        }
+        return 0;
+    }
+    public static void main(String[] args) {
+        double suma=0;
+        Scanner scan = new Scanner(System.in);
+        int number = scan.nextInt();
+        for (int i=0;i < number ; i++)
+        {
+            int n = scan.nextInt();
+            if(kwa(n)==1)
+            {
+                suma++;
+                System.out.println(n);
+            }
+        }
+        System.out.println(suma);
+    }
+}
 zad 2.1 d
 import java.util.Scanner;
 import static java.lang.Math.*;

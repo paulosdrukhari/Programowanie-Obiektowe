@@ -1,0 +1,206 @@
+Dzien dobry , tutaj sa wszystkie zadania z lab 1 by łatwiej było pani sprawdzac 
+Paweł Deptuła 155257 
+
+//zad 1 
+import java.util.Scanner;
+public class Main {
+
+    public static void main(String[] args) {
+
+        Scanner myObj = new Scanner(System.in);
+        System.out.println("Styczen");
+        int a =   myObj.nextInt();;
+        System.out.println("Luty");
+        int b =   myObj.nextInt();
+        System.out.println("Marzec");
+        int c =   myObj.nextInt();;
+        System.out.println(a+b+c);
+    }
+}
+//zad 2 
+public class Main {
+
+    public static void main(String[] args) {
+        int suma=0;
+        for(int i=1;i<=10;i++)
+        {
+            suma+=i;
+        }
+        System.out.println(suma);
+    }
+}
+//zad 3 
+public class Main {
+
+    public static void main(String[] args) {
+
+        int suma=1;
+        for(int i=1;i<=10;i++)
+        {
+            suma*=i;
+        }
+        System.out.println(suma);
+    }
+}
+//zad 4
+public class Main {
+
+    public static void main(String[] args) {
+        double suma;
+        suma = 1000;
+        suma=suma+(suma*0.06);
+        System.out.println(suma);
+        suma=suma+(suma*0.06);
+        System.out.println(suma);
+        suma=suma+(suma*0.06);
+        System.out.println(suma);
+    }
+}
+//zad 5 
+import java.util.Scanner;
+import java.util.*;
+public class Main {
+
+    public static void main(String[] args) {
+
+        Scanner myObj = new Scanner(System.in);
+        String a =   myObj.nextLine();
+        System.getProperty("line.separator");
+        for(int i=0;i<a.length()+2;i++)
+        {
+            
+        System.out.print("-");
+        }
+        System.out.println();
+        System.out.println("|"+a+"|");
+        System.getProperty("line.separator");
+        for(int i=0;i<a.length()+2;i++)
+        {
+            System.out.print("-");
+        }
+    }
+}
+//zad 6
+public class Main {
+
+    public static void main(String[] args) {
+        System.out.println("     /////");
+        System.getProperty("line.separator");
+        System.out.println("    +\"\"\"\"\"+");
+        System.getProperty("line.separator");
+        System.out.println("   (| o o |)");
+        System.getProperty("line.separator");
+        System.out.println("     | ^ |   ");
+        System.getProperty("line.separator");
+        System.out.println("    | `-' |");
+        System.getProperty("line.separator");
+        System.out.println("    +-----+");
+        System.getProperty("line.separator");
+    }
+}
+//zad 7 
+import java.io.*;
+public class Main {
+
+    public static void main(String[] args) {
+        String Str = new String("Pawel Deptul");
+
+        System.out.print("Return Value :" );
+        System.out.println(Str.toUpperCase() );
+    }
+}
+//zad 8 
+public class Main {
+
+    public static void main(String[] args){
+        System.out.println("    +");
+        System.getProperty("line.separator");
+        System.out.println("   + +");
+        System.getProperty("line.separator");
+        System.out.println("  +   +");
+
+        System.getProperty("line.separator");
+        System.out.println(" +-----+");
+        System.getProperty("line.separator");
+        System.out.println(" | .-. |  ");
+        System.getProperty("line.separator");
+        System.out.println(" | | | |  ");
+        System.getProperty("line.separator");
+        System.out.println(" +-+-+-+  ");
+
+    }
+}
+//zad 9 
+public class Main {
+
+    public static void main(String[] args) {
+        System.out.println(" /\\_/\\       -----");
+        System.getProperty("line.separator");
+        System.out.println("( ` ' )    / Hello \\");
+        System.getProperty("line.separator");
+        System.out.println(" ( - )    < Junior |");
+
+        System.getProperty("line.separator");
+        System.out.println(" | | |     \\ Coder!/");
+        System.getProperty("line.separator");
+        System.out.println("(__|__)    -----");
+        System.getProperty("line.separator");
+    }
+}
+//zad 10 
+package com.company;
+
+public class Main {
+
+    public static void main(String[] args) {
+        System.out.println("Teletubisie");
+        System.getProperty("line.separator");
+        System.out.println("Smerfy");
+        System.getProperty("line.separator");
+        System.out.println("Mud Magz");
+    }
+}
+//zad 11
+public class Main {
+
+    public static void main(String[] args) {
+        System.out.println("Pewna panna z uroczych Walewic\n" +
+                "założyła raz skansen dla tluka.\n" +
+                "Nie żałując starań ani grosza\n" +
+                "zatrudniła zdolnego kustosza,\n" +
+                "praczki, szwaczki, sprzątaczki, kucharki,\n" +
+                "kierownika i dwie sekretarki.\n" +
+                "Wszystkich razem z dwadzieścia etatów.\n" +
+                "I do dzisiaj szuka eksponatów");
+    }
+}
+//zad 12
+public class Main {
+
+    public static void main(String[] args) {
+        System.out.println("****************------------------------------");
+        System.getProperty("line.separator");
+        System.out.println("****************------------------------------");
+        System.getProperty("line.separator");
+        System.out.println("****************------------------------------");
+        System.getProperty("line.separator");
+        System.out.println("****************------------------------------");
+        System.getProperty("line.separator");
+        System.out.println("****************------------------------------");
+        System.getProperty("line.separator");
+        System.out.println("****************------------------------------");
+        System.getProperty("line.separator");
+        System.out.println("----------------------------------------------");
+
+        System.getProperty("line.separator");
+        System.out.println("----------------------------------------------");
+        System.getProperty("line.separator");
+        System.out.println("----------------------------------------------");
+        System.getProperty("line.separator");
+        System.getProperty("line.separator");
+        System.out.println("----------------------------------------------");
+        System.getProperty("line.separator");
+        System.out.println("----------------------------------------------");
+        System.getProperty("line.separator");
+    }
+}

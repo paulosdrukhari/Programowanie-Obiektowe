@@ -1,0 +1,443 @@
+zad 1.1a
+import java.util.Scanner;
+public class Main {
+
+    public static void main(String[] args) {
+        int suma=0;
+        Scanner scan = new Scanner(System.in);
+        int number = scan.nextInt();
+        for (int i=0;i<number ; i++)
+        {
+            int n = scan.nextInt();
+            suma+=n;
+        }
+        System.out.println(suma + " " + number);
+    }
+}
+zad 1.1b
+import java.util.Scanner;
+public class Main {
+
+    public static void main(String[] args) {
+        int suma=1;
+        Scanner scan = new Scanner(System.in);
+        int number = scan.nextInt();
+        for (int i=0;i<number ; i++)
+        {
+            int n = scan.nextInt();
+            suma*=n;
+        }
+        System.out.println(suma + " " + number);
+    }
+}
+zad1.1c
+import java.util.Scanner;
+public class Main {
+
+    public static void main(String[] args) {
+        int suma=0;
+        Scanner scan = new Scanner(System.in);
+        int number = scan.nextInt();
+        for (int i=0;i<number ; i++)
+        {
+            int n = scan.nextInt();
+            n=Math.abs(n);
+            suma+=n;
+        }
+        System.out.println(suma + " " + number);
+    }
+}
+zad1.1d
+import java.util.Scanner;
+public class Main {
+
+    public static void main(String[] args) {
+        double suma=0;
+        Scanner scan = new Scanner(System.in);
+        int number = scan.nextInt();
+        for (int i=0;i<number ; i++)
+        {
+            double n = scan.nextInt();
+            n=Math.sqrt(Math.abs(n));
+            suma+=n;
+        }
+        System.out.println(suma + " " + number);
+    }
+}
+zad 1.1e
+import java.util.Scanner;
+public class Main {
+
+    public static void main(String[] args) {
+        int suma=1;
+        Scanner scan = new Scanner(System.in);
+        int number = scan.nextInt();
+        for (int i=0;i<number ; i++)
+        {
+            int n = scan.nextInt();
+            n=Math.abs(n)
+            suma*=n;
+        }
+        System.out.println(suma + " " + number);
+    }
+}
+
+zad 1.1f
+import java.util.Scanner;
+public class Main {
+
+    public static void main(String[] args) {
+        double suma=0;
+        Scanner scan = new Scanner(System.in);
+        int number = scan.nextInt();
+        for (int i=0;i<number ; i++)
+        {
+            double n = scan.nextInt();
+            n=Math.pow(n,2);
+            suma+=n;
+        }
+        System.out.println(suma + " " + number);
+    }
+}
+zad 1.1g
+import java.util.Scanner;
+public class Main {
+
+    public static void main(String[] args) {
+        double suma=0;
+        double suma2=1;
+        Scanner scan = new Scanner(System.in);
+        int number = scan.nextInt();
+        for (int i=0;i<number ; i++)
+        {
+            double n = scan.nextInt();
+            suma+=n;
+            suma2*=n;
+        }
+        System.out.println(suma + " " + suma2);
+    }
+}
+zad 1.1h
+import java.util.Scanner;
+
+import static java.lang.Math.*;
+public class Main {
+
+    public static void main(String[] args) {
+        int wynik=0;
+        Scanner scan = new Scanner(System.in);
+        int number = scan.nextInt();
+        double[] liczby = new double[number];
+        for (int i=0;i<number ; i++)
+        {
+            int n = scan.nextInt();
+        }
+        for(int i = 0; i<liczby.length-1; i++) 
+        {
+            wynik+=pow(-1, i+1)*liczby[i];
+        }
+        System.out.println(wynik);
+      }
+}
+zad 1.1 i
+import java.util.Scanner;
+
+public class Main {
+    public static int silnia(int n) {
+        int iloczyn = 1;
+        for(int i = 1; i <= n; i++) {
+            iloczyn *= i;
+        }
+        return iloczyn;
+    }
+    public static void main(String[] args) {
+        double suma=0;
+        Scanner scan = new Scanner(System.in);
+        int number = scan.nextInt();
+        for (int i=0;i < number ; i++)
+        {
+            double n = scan.nextInt();
+            if(i%2==0)
+            {
+                n=Math.pow(-1,n)*n;
+                suma-=(n/silnia(i));
+            }
+            else if(i%2==1) {
+                n = Math.pow(-1, n) * n;
+                suma += (n / silnia(i));
+            }
+        }
+        System.out.println(suma );
+    }
+}
+zad 1.2
+ import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        double[] anArray;
+        double suma=0;
+        Scanner scan = new Scanner(System.in);
+        int number = scan.nextInt();
+        anArray = new double[number];
+        for (int i=0;i < number ; i++)
+        {
+            double n = scan.nextInt();
+            anArray[i]=n;
+        }
+        for (int i=1;i < number ; i++)
+        {
+            System.out.println(anArray[i]);
+        }
+        System.out.println(anArray[0]);
+    }
+}
+
+zad 2.1 a  
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        double suma=0;
+        Scanner scan = new Scanner(System.in);
+        int number = scan.nextInt();
+        for (int i=0;i < number ; i++)
+        {
+            double n = scan.nextInt();
+            if(n%2!=0)
+            {
+                suma++;
+            }
+        }
+        System.out.println(suma );
+    }
+}
+zad 2.1 b
+zad 2.1 c
+
+zad 2.1 d
+import java.util.Scanner;
+import static java.lang.Math.*;
+
+
+public class Main {
+
+public static void main(String[] args) {
+int counter = 0;
+    	double wynik;
+        Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+        double[] liczby = new double[n];
+       	for(int i = 0; i<=liczby.length-1; i++) {
+            liczby[i] = scn.nextDouble();
+
+        }
+        for(int i = 1; i<=liczby.length-2; i++){
+            if(liczby[i] < (liczby[i-1]+liczby[i+1])/2)
+                counter++;
+        }
+          System.out.println(counter);
+    		}
+	}
+
+
+//zad 2.1e
+import java.util.Scanner;
+import static java.lang.Math.*;
+
+
+public class Main {
+
+public static void main(String[] args) {
+int counter = 0;
+    	double wynik;
+        Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+        double[] liczby = new double[n];
+       	for(int i = 0; i<=liczby.length-1; i++) {
+            liczby[i] = scn.nextDouble();
+
+        }
+        int factorial = 1;
+
+        for (int i = 1; i <= liczby.length - 1; i++) {
+           factorial *= i;
+           if (pow(2, i) <= liczby[i] && liczby[i] <= factorial)
+                counter++;
+       }
+        System.out.println(counter);
+	}
+}
+
+
+//zad 2.1f
+       import java.util.Scanner;
+import static java.lang.Math.*;
+public class Main {
+
+public static void main(String[] args) {
+int counter = 0;
+    	double wynik;
+        Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+        double[] liczby = new double[n];
+       	for(int i = 0; i<=liczby.length-1; i++) {
+            liczby[i] = scn.nextDouble();
+            if(i+1%2 != 0 && liczby[i]%2==0)
+            {
+                counter++;
+            }
+        }
+         System.out.println(counter);
+      }
+
+	}
+//zad 2.1g
+import java.util.Scanner;
+import static java.lang.Math.*;
+public class Main {
+
+public static void main(String[] args) {
+int counter = 0;
+    	double wynik;
+        Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+        double[] liczby = new double[n];
+       	 for(int i = 0; i<=liczby.length-1; i++){
+           liczby[i] = scn.nextDouble();
+           if(liczby[i] %2 !=0 && liczby[i] >=0)
+               counter++;
+       }
+       System.out.println(counter);
+      }
+
+}
+//zad 2.1h
+import java.util.Scanner;
+import static java.lang.Math.*;
+public class Main {
+
+public static void main(String[] args) {
+int counter = 0;
+    	double wynik;
+        Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+        double[] liczby = new double[n];
+       for(int i = 0; i<=liczby.length-1; i++){
+          liczby[i] = scn.nextDouble();
+           if(abs(liczby[i]) < pow(i, 2))
+               counter++;
+       }
+       System.out.println(counter);
+      }
+
+}
+
+//zad 2.2
+import java.util.Scanner;
+import static java.lang.Math.*;
+public class Main {
+
+public static void main(String[] args) {
+int counter = 0;
+    	double wynik;
+        Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+        double[] liczby = new double[n];
+      for(int i = 0; i<=liczby.length-1; i++){
+         liczby[i] = scn.nextDouble();
+           if(liczby[i] > 0)
+             counter+=2*liczby[i];
+     }
+      System.out.println(counter);
+}
+}
+//zad 2.3
+import java.util.Scanner;
+import static java.lang.Math.*;
+public class Main {
+
+public static void main(String[] args) {
+int counter = 0;
+    	double wynik;
+        Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+        double[] liczby = new double[n];
+int zeros = 0, plus = 0, minus = 0;
+for(int i = 0; i<=liczby.length-1; i++){
+         liczby[i] = scn.nextDouble();
+          if(liczby[i] == 0)
+               zeros++;
+           if(liczby[i] < 0)
+               minus++;
+           if(liczby[i] > 0)
+               plus++;
+       }
+       System.out.println(plus+" "+minus+" "+zeros);
+}
+}
+//zad 2.4
+import java.util.Scanner;
+import static java.lang.Math.*;
+public class Main {
+
+public static void main(String[] args) {
+int counter = 0;
+    	double wynik;
+        Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+        double[] liczby = new double[n];
+     double max, min;
+
+       for(int i = 0; i<=liczby.length-1; i++){
+          liczby[i] = scn.nextDouble();
+
+       }
+      min = liczby[0];
+      max = liczby[0];
+       for(int i = 0; i<=liczby.length-1;i++)
+             if(i > 0) {
+                 if (liczby[i] > max)
+                     max = liczby[i];
+                 if(liczby[i] < min)
+                      min = liczby[i];
+               }
+
+     System.out.println(min+ "\n" + max);
+}
+}
+
+
+
+//zad 2.5
+
+import java.util.Scanner;
+import static java.lang.Math.*;
+public class Main {
+
+public static void main(String[] args) {
+int counter = 0;
+    	double wynik;
+        Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+        double[] liczby = new double[n];
+       for(int i = 0; i<=liczby.length-1; i++){
+            liczby[i] = scn.nextDouble();
+
+       }
+        for(int i = 0; i<=liczby.length-2;i++){
+
+
+           if(liczby[i] > 0 && liczby[i+1] > 0)
+                counter++;
+        }
+
+        System.out.println(counter);
+
+
+    }
+
+
+
+}

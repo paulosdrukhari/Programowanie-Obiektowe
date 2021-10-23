@@ -1,0 +1,490 @@
+//zad 1a 
+import java.util.Scanner;
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int number = scan.nextInt();
+        int min=-999;
+        int max=999;
+        int [] tab = new int[number+1];
+        int par=0;
+        int niep=0;
+        for(int i=0;i<number;i++)
+        {
+            tab[i]=(int)(Math.random()*((max-min)+1))+min;
+        }
+        for(int i=0;i<number;i++)
+        {
+            System.out.println(tab[i]);
+        }
+        for(int i=0;i<number;i++)
+        {
+            if(tab[i]%2==0)
+            {
+                par++;
+            }
+            else{
+                niep++;
+            }
+        }
+        System.out.println(par+" "+niep);
+
+    }
+}
+//zad 1b 
+import java.util.Scanner;
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int number = scan.nextInt();
+        int min=-999;
+        int max=999;
+        int zer=0;
+        int [] tab = new int[number+1];
+        int par=0;
+        int niep=0;
+        for(int i=0;i<number;i++)
+        {
+            tab[i]=(int)(Math.random()*((max-min)+1))+min;
+        }
+        for(int i=0;i<number;i++)
+        {
+            System.out.println(tab[i]);
+        }
+        for(int i=0;i<number;i++)
+        {
+            if(tab[i]>0)
+            {
+                par++;
+            }
+            else if (tab[i]<0){
+                niep++;
+            }
+            else{
+                zer++;
+            }
+        }
+        System.out.println(par+" "+niep+" " +zer);
+
+    }
+}
+//zad 1 c 
+import java.util.Scanner;
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int number = scan.nextInt();
+        int min=-999;
+        int max=999;
+        int [] tab = new int[number+1];
+        int par=0;
+        int niep=0;
+        for(int i=0;i<number;i++)
+        {
+            tab[i]=(int)(Math.random()*((max-min)+1))+min;
+        }
+        for(int i=0;i<number;i++)
+        {
+            System.out.println(tab[i]);
+        }
+        int max1=tab[0];
+        for(int i=0;i<number;i++)
+        {
+            if(tab[i]>max1) {
+                max1 = tab[i];
+            }
+        }
+        for(int i=0;i<number;i++)
+        {
+            if(tab[i]==max1) {
+                par++;
+            }
+        }
+        System.out.println(par+" "+max1);
+
+    }
+}
+//zad 1 d
+import java.util.Scanner;
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int number = scan.nextInt();
+        int min=-999;
+        int max=999;
+        int zer=0;
+        int [] tab = new int[number+1];
+        int par=0;
+        int niep=0;
+        for(int i=0;i<number;i++)
+        {
+            tab[i]=(int)(Math.random()*((max-min)+1))+min;
+        }
+        for(int i=0;i<number;i++)
+        {
+            System.out.println(tab[i]);
+        }
+        for(int i=0;i<number;i++)
+        {
+            if(tab[i]>0)
+            {
+                par+=tab[i];
+            }
+            else if (tab[i]<0){
+                niep-=tab[i];
+            }
+        }
+        System.out.println(par+" "+niep+" " +zer);
+
+    }
+}
+//zad 1e
+import java.util.Scanner;
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int number = scan.nextInt();
+        int min=-999;
+        int max=999;
+        int zer=0;
+        int [] tab = new int[number+1];
+        int par=0;
+        int wynik=0;
+        for(int i=0;i<number;i++)
+        {
+            tab[i]=(int)(Math.random()*((max-min)+1))+min;
+        }
+        for(int i=0;i<number;i++)
+        {
+            System.out.println(tab[i]);
+        }
+        for(int i=0;i<number;i++)
+        {
+            if(tab[i]>0)
+            {
+                par++;
+            }
+            else if(par>wynik){
+                        wynik=par;
+                par=0;
+            }
+        }
+        System.out.println(par+" "+wynik);
+
+    }
+}
+//zad 1f
+import java.util.Scanner;
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int number = scan.nextInt();
+        int min=-999;
+        int max=999;
+        int zer=0;
+        int [] tab = new int[number+1];
+        int par=0;
+        int wynik=0;
+        for(int i=0;i<number;i++)
+        {
+            tab[i]=(int)(Math.random()*((max-min)+1))+min;
+        }
+        for(int i=0;i<number;i++)
+        {
+            System.out.println(tab[i]);
+        }
+        for(int i=0;i<number;i++)
+        {
+            if(tab[i]>0)
+            {
+                tab[i]=1;
+            }
+            else{
+                tab[i]=-1;
+            }
+        }
+        for(int i=0;i<number;i++)
+        {
+            System.out.println(tab[i]);
+        }
+        System.out.println(par+" "+wynik);
+
+    }
+}
+//zad 1g
+import java.util.Scanner;
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int number = scan.nextInt();
+        int min=-999;
+        int max=999;
+        int lewy = scan.nextInt();
+        int prawy = scan.nextInt();
+        final int [] tab = new  int[number];
+        final int [] tab2 = tab;
+        int par=0;
+        int wynik=0;
+        for(int i=0;i<number;i++)
+        {
+            tab[i]=(int)(Math.random()*((max-min)+1))+min;
+        }
+        for(int i=0;i<number;i++)
+        {
+            System.out.println(tab[i]);
+        }
+        System.out.println("space");
+        int y=prawy-lewy;
+        for(int i = 0; i < lewy; i++)
+        {
+           tab2[i]=tab[i];
+        }
+        for(int i = prawy; i < number; i++)
+        {
+            tab2[i]=tab[i];
+        }
+        int h=lewy;
+        while (lewy < prawy)
+        {
+            int pom = tab[lewy];
+            tab[lewy]  = tab[prawy];
+            tab[prawy] = pom;
+            lewy++;
+            prawy--;
+        }
+        for(int i=0;i<number;i++)
+        {
+            System.out.println(tab[i]);
+        }
+
+    }
+}
+//zad 2
+import java.util.Scanner;
+public class Main {
+
+    Scanner scan = new Scanner(System.in);
+    int number = scan.nextInt();
+    int min = -999;
+    int max = 999;
+    int[] tab = new int[number + 1];
+
+    public static void wypisz(int tab[], int number) {
+        for (int i = 0; i < number; i++)
+            System.out.print(tab[i] + " ");
+    }
+
+    public static void generuj(int tab[], int number, int min, int max) {
+        for (int i = 0; i < number; i++) {
+            tab[i] = (int) (Math.random() * ((max - min) + 1)) + min;
+        }
+    }
+
+    public static int ileniep(int tab[], int number) {
+        int ile = 0;
+        for (int i = 0; i < number; i++) {
+            if (tab[i] % 2 != 1) {
+                ile++;
+            }
+        }
+        return ile;
+    }
+    public static int   ilepar(int tab[], int number) {
+        int ile = 0;
+        for (int i = 0; i < number; i++) {
+            if (tab[i] % 2 == 1) {
+                ile++;
+            }
+        }
+        return ile;
+    }
+    public static int iled(int tab[], int number) {
+        int ile = 0;
+        for (int i = 0; i < number; i++) {
+            if (tab[i]>0) {
+                ile++;
+            }
+        }
+        return ile;
+    }
+    public static int ilez(int tab[], int number) {
+        int ile = 0;
+        for (int i = 0; i < number; i++) {
+            if (tab[i]==0) {
+                ile++;
+            }
+        }
+        return ile;
+    }
+    public static int ileu(int tab[], int number) {
+        int ile = 0;
+        for (int i = 0; i < number; i++) {
+            if (tab[i]<0) {
+                ile++;
+            }
+        }
+        return ile;
+    }
+    public static int ilem(int tab[], int number) {
+        int maxa = tab[0];
+        for (int i = 0; i < number; i++) {
+            if (tab[i]>maxa) {
+                maxa=tab[i];
+            }
+        }
+        return maxa;
+    }
+    public static int sumad(int tab[], int number) {
+        int ile = 0;
+        for (int i = 0; i < number; i++) {
+            if (tab[i]>0) {
+                ile=+tab[i];
+            }
+        }
+        return ile;
+    }
+    public static int sumau(int tab[], int number) {
+        int ile = 0;
+        for (int i = 0; i < number; i++) {
+            if (tab[i]>0) {
+                ile=+tab[i];
+            }
+        }
+        return ile;
+    }
+    public static int sumadodciag(int tab[], int number) {
+        int par=0;
+        int wynik=0;
+        for(int i=0;i<number;i++)
+        {
+            if(tab[i]>0)
+            {
+                par++;
+            }
+            else if(par>wynik){
+                wynik=par;
+                par=0;
+            }
+        }
+        return wynik;
+    }
+    public static void signum(int tab[], int number) {
+        for(int i=0;i<number;i++)
+        {
+            if(tab[i]>0)
+            {
+                tab[i]=1;
+            }
+            else if(tab[i]<0){
+                tab[i]=-1;
+            }
+            else{
+                tab[i]=0;
+            }
+        }
+    }
+    public static void odwroc(int tab[], int number,int lewy,int prawy) {
+        while (lewy < prawy)
+        {
+            int pom = tab[lewy];
+            tab[lewy]  = tab[prawy];
+            tab[prawy] = pom;
+            lewy++;
+            prawy--;
+        }
+    }
+
+
+
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int number = scan.nextInt();
+        int min = -999;
+        int max = 999;
+        int[] tab = new int[number + 1];
+        generuj(tab, number, -999, 999);
+        wypisz(tab, number);
+        System.out.println("A ile niep " + ileniep(tab, number) + "\n Parzyste: " + ilepar(tab, number));
+        System.out.println("B ile dod " + iled(tab, number) + "\n  Zera: " + ilez(tab, number) + "\n Ujemne: " + ileu(tab, number));
+        System.out.println("C ile max " + ilem(tab, number));
+        System.out.println("D suma dod" + sumad(tab, number) + "\n Suma ujemnych: " + sumau(tab, number));
+        System.out.println("E ilosc dod ciag" + sumadodciag(tab, number));
+        System.out.println("F sigma");
+        signum(tab, number);
+        wypisz(tab,number);
+        System.out.println("G odwroc tablice od 2 do 3 ");
+        odwroc(tab, 1, 2,3);
+        wypisz(tab,number);
+    }
+}
+//zad 3 
+import java.util.Scanner;
+public class Main {
+    public static int generuj(int min, int max) {
+            return (int) (Math.random() * ((max - min) + 1)) + min;
+    }
+    public static void zap(int tab[][],int n,int m)
+    {
+        for(int i=0;i<n;i++)
+        {
+            for(int j=0;j<m;j++)
+            {
+               tab[i][j]=generuj(1,9);
+            }
+        }
+    }
+ public static void wypisz(int tab[][],int n,int m)
+ {
+     for(int i=0;i<n;i++)
+     {
+         System.out.print("|");
+         for(int j=0;j<m;j++)
+         {
+             System.out.print(tab[i][j]+ " ");
+         }
+         System.out.println("|");
+     }
+ }
+ static void mnozenie( int b[][], int a[][],int n, int m,int k )
+    {
+        if (m != n)
+        {
+            System.out.println("blad podstawowy");
+            return;
+        }
+
+        int c[][] = new int[m][n];
+
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j <n ; j++) {
+                for (int y = 0; y < k; y++)
+                    c[i][j] += a[i][y] * b[y][j];
+            }
+        }
+        wypisz(c,n,k);
+    }
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int m = scan.nextInt();
+
+        int n = scan.nextInt();
+
+        int k = scan.nextInt();
+        int[][] a = new int[m][n];
+        int[][] b = new int[k][n];
+        zap(a,m,n);
+        zap(b,k,n);
+        wypisz(a,m,n);
+        System.out.println("");
+        wypisz(a,k,n);
+        mnozenie(a,b,n,m,k);
+    }
+}

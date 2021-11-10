@@ -1,0 +1,146 @@
+//zad 1 
+import java.util.ArrayList;
+
+public class Main {
+    public static ArrayList<Integer> append(ArrayList<Integer> a, ArrayList<Integer> b)
+    {
+        ArrayList<Integer>x = new ArrayList<>();
+        for(int i : a)
+        {
+            x.add(i);
+        }
+        for(int i : b)
+        {
+            x.add(i);
+        }
+        return x;
+    }
+    public static void main(String[] args) {
+        ArrayList<Integer> a1 = new ArrayList<>();
+        a1.add(1);
+        a1.add(2);
+        a1.add(3);
+        ArrayList<Integer> a2 = new ArrayList<>();
+        a2.add(4);
+        a2.add(5);
+        a2.add(6);
+        System.out.println(append(a1,a2));
+    }
+}
+//zad 2 
+import java.util.ArrayList;
+import java.util.Iterator;
+public class Main {
+    public static ArrayList<Integer> append(ArrayList<Integer> a, ArrayList<Integer> b)
+    {
+        ArrayList<Integer>x = new ArrayList<>(a.size()+b.size());
+        Iterator<Integer> ab = a.iterator();
+        Iterator<Integer> ba = b.iterator();
+        int h=0;
+        while (ab.hasNext() || ba.hasNext()) {
+            if (h % 2 == 0) {
+                h++;
+                int p = ab.next();
+                x.add(p);
+            } else {
+                h++;
+                int c = ba.next();
+                x.add(c);
+            }
+        }
+        return x;
+    }
+    public static void main(String[] args) {
+        ArrayList<Integer> a1 = new ArrayList<>();
+        a1.add(1);
+        a1.add(2);
+        a1.add(3);
+        ArrayList<Integer> a2 = new ArrayList<>();
+        a2.add(4);
+        a2.add(5);
+        a2.add(6);
+        System.out.println(append(a1,a2));
+    }
+}
+//zad 3 
+import java.util.ArrayList;
+
+import java.util.Iterator;
+import java.util.Collections;
+public class Main {
+    public static ArrayList<Integer> append(ArrayList<Integer> a, ArrayList<Integer> b)
+    {
+        ArrayList<Integer>x = new ArrayList<>(a.size()+b.size());
+            Collections.sort(a);
+            Collections.sort(b);
+            x.addAll(a);
+            x.addAll(b);
+            Collections.sort(x);
+        return x;
+    }
+    public static void main(String[] args) {
+        ArrayList<Integer> a1 = new ArrayList<>();
+        a1.add(7);
+        a1.add(2);
+        a1.add(3);
+        ArrayList<Integer> a2 = new ArrayList<>();
+        a2.add(4);
+        a2.add(5);
+        a2.add(6);
+        a2.add(9);
+        System.out.println(append(a1,a2));
+    }
+}
+//zad 4 
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.Collections;
+public class Main {
+    public static ArrayList<Integer> append(ArrayList<Integer> a)
+    {
+        ArrayList<Integer>x = new ArrayList<>(a.size());
+           for(int i = a.size() - 1; i >= 0; i--)
+           {
+               x.add(a.get(i));
+           }
+        return x;
+    }
+    public static void main(String[] args) {
+        ArrayList<Integer> a1 = new ArrayList<>();
+        a1.add(7);
+        a1.add(2);
+        a1.add(3);
+        ArrayList<Integer> a2 = new ArrayList<>();
+        a2.add(4);
+        a2.add(5);
+        a2.add(6);
+        a2.add(9);
+        System.out.println(append(a1));
+    }
+}
+//zad 5 
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.Collections;
+public class Main {
+    public static void  append(ArrayList<Integer> a)
+    {
+        ArrayList<Integer>x = new ArrayList<>(a.size());
+           for(int i = a.size() - 1; i >= 0; i--)
+           {
+               x.add(a.get(i));
+           }
+        for(int i = 0; i<a.size(); i++)
+        {
+            a.set(i,x.get(i));
+        }
+    }
+    public static void main(String[] args) {
+        ArrayList<Integer> a1 = new ArrayList<>();
+        a1.add(7);
+        a1.add(2);
+        a1.add(3);
+        append(a1);
+        System.out.println(a1);
+    }
+}

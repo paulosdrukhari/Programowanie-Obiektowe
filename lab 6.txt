@@ -1,0 +1,132 @@
+//zad 1 
+class RochunekBankowy{
+    double Rocznastopa;
+    double saldo;
+     public void miesiecznastopa()
+    {
+        double wynik = (this.saldo*this.Rocznastopa);
+        this.saldo = this.saldo + wynik/12;
+    }
+    public void setRocznastopa(double xd)
+    {
+        this.Rocznastopa = xd;
+    }
+}
+public class Zadania {
+    public static void main(String[] args) {
+        RochunekBankowy saver1 = new RochunekBankowy();
+        saver1.Rocznastopa =0.04;
+        saver1.saldo=2000.00;
+        RochunekBankowy saver2 = new RochunekBankowy();
+        saver2.Rocznastopa = 0.04;
+        saver2.saldo=3000.00;
+        saver1.miesiecznastopa();
+        saver2.miesiecznastopa();
+        System.out.println(saver2.saldo);
+        System.out.println(saver1.saldo);
+        saver1.setRocznastopa(5);
+        saver1.setRocznastopa(5);
+        saver2.miesiecznastopa();
+        saver1.miesiecznastopa();
+        System.out.println(saver2.saldo);
+        System.out.println(saver1.saldo);
+    }
+}
+//zad 2 
+import java.lang.StringBuffer;
+import java.util.Arrays;
+public class IntegerSet {
+    public boolean[] zbior = new boolean[100];
+
+    public void wypisz(){
+        for(int i = 0; i< 100; i++){
+            if(zbior[i] == true)
+                System.out.print(i+1 + " ");
+        }
+    }
+
+    public static boolean[] union(boolean[] s1, boolean[] s2){
+        boolean[] uS = new boolean[100];
+        for(int i = 0; i<100; i++){
+            if(s1[i] == false && s2[i] == false)
+                uS[i] = false;
+            else uS[i] = true;
+        }
+        return uS;
+    }
+    public  void insertelement(int element){
+        zbior[element-1]=true;
+    }
+    public  void deletelement(int element){
+        zbior[element-1]=false;
+    }
+    public static boolean[] intersection(boolean[] s1, boolean[] s2){
+        boolean[] uSa = new boolean[100];
+        for(int i = 0; i<100; i++){
+            uSa[i]=s1[i] && s2[i];
+        }
+        return uSa;
+    }
+    public boolean isEqual(boolean[] s3)
+    {
+        for(int i=0;i<100;i++)
+        {
+            if(zbior[i]!=s3[i])
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+    public String ToStringx(boolean[] s1)
+    {
+        return Arrays.toString(s1);
+    }
+
+
+}
+
+//wywolania zad 2 
+public class xd {
+    public static void main(String[] args) {
+        IntegerSet set1 = new IntegerSet();
+        IntegerSet set2 = new IntegerSet();
+        IntegerSet set3 = new IntegerSet();
+        for(int i=0; i<100; i++){
+            if(i<11)
+                set1.zbior[i] = true;
+            else set1.zbior[i] = false;
+        }
+        for(int i=0; i<100; i++){
+            if(i<11)
+                set3.zbior[i] = true;
+            else set3.zbior[i] = false;
+        }
+        for(int i=0; i<100; i++){
+            if(i>=9 && i<20)
+                set2.zbior[i] = true;
+            else set2.zbior[i] = false;
+        }
+
+       set1.wypisz();
+       String xd=set1.ToStringx(set1.zbior);
+       System.out.println(xd);
+       System.out.println(set1.isEqual(set3.zbior));
+       System.out.println(set2.isEqual(set3.zbior));
+       set2.insertelement(55);
+        System.out.println();
+        set2.wypisz();
+        System.out.println();
+        set2.deletelement(55);
+        set2.wypisz();
+        IntegerSet setU = new IntegerSet();
+        setU.zbior = IntegerSet.union(set1.zbior, set2.zbior);
+        System.out.println();
+        setU.wypisz();
+        System.out.println("alpha");
+        IntegerSet setU2 = new IntegerSet();
+        setU2.zbior = IntegerSet.intersection(set1.zbior, set2.zbior);
+        setU2.wypisz();
+        System.out.println();
+    }
+}

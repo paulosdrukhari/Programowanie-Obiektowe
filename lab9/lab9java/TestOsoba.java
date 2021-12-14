@@ -8,8 +8,8 @@ public class TestOsoba {
         ArrayList<Osoba>x = new ArrayList<Osoba>();
         x.add(new Osoba("srama",LocalDate.of(1999,12,12)));
         x.add(new Osoba("srama",LocalDate.of(1998,12,12)));
-        x.add(new Osoba("Zyt",LocalDate.of(2137,12,11)));
-        x.add(new Osoba("Zyti",LocalDate.of(2137,12,11)));
+        x.add(new Osoba("Ars",LocalDate.of(2137,12,11)));
+        x.add(new Osoba("arsa",LocalDate.of(2137,12,11)));
         x.add(new Osoba("Deptuła",LocalDate.of(2000,11,24)));
         System.out.print(x);
         System.out.print("STOP");

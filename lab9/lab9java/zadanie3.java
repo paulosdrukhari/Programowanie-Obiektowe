@@ -8,7 +8,6 @@ public class zadanie3 {
     ArrayList<String>x = new ArrayList<String>();  
     try  
     {  
-    //the file to be opened for reading  
     FileInputStream fis=new FileInputStream("C:\\Users\\zedko\\Desktop\\lab9java\\xd.txt.txt");       
     Scanner sc=new Scanner(fis); 
     while(sc.hasNextLine())  

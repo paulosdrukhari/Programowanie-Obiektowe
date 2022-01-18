@@ -1,0 +1,173 @@
+//zad 1 
+import java.util.Scanner;
+import java.util.PriorityQueue;
+import java.util.*;
+
+public class priorityqueue {
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        PriorityQueue<List> pq = new
+                PriorityQueue<List>(5, new ListComparator());
+
+        List l1 = new List("no ", 8);
+        pq.add(l1);
+        List l2 = new List("niue",1);
+        pq.add(l2);
+        List l3 = new List("wyc",4);
+        pq.add(l3);
+        List l4 = new List("trawe",1);
+        pq.add(l4);
+        List l5 = new List("biedra isc",6);
+        nastepne(pq);
+        String firstName;
+        firstName = scan.nextLine();
+        System.out.println(firstName);
+        while(firstName!="end") {
+            firstName = scan.nextLine();
+            if(firstName=="dodaj")
+            {
+                pq.add(l5);
+            }
+            if(firstName=="next")
+            {
+                System.out.println(pq.poll().getTodo());
+            }
+        }
+        scan.close();
+    }
+    public static void nastepne(PriorityQueue<List> pq)
+    {
+        pq.poll();
+    }
+}
+class ListComparator implements Comparator<List>{
+    public int compare(List l1, List l2) {
+        if (l1.n < l2.n)
+            return -1;
+        else if (l1.n > l2.n)
+            return 1;
+        return 0;
+    }
+}
+
+class List {
+    public String todo;
+    public int n;
+    public List(String todo, int n) {
+
+        this.todo = todo;
+        this.n = n;
+    }
+
+    public String getTodo() {
+        return todo;
+    }
+}
+//zad 2 
+import java.util.Scanner;
+import java.util.*;
+
+public class priorityqueue {
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        Map<String, String> employees = new TreeMap<>();
+ 		employees.put( "Jan Kowalski","x");
+ 		employees.put( "Wojciech Kowalski","e");
+ 		employees.put("Kasia Piotrowska","x");
+ 		employees.put( "Anna Zawadzka","e");
+ 		employees.put( "ArJan Kwowalski","x");
+        String firstName;
+        System.out.println("Start");
+        firstName = "wypisz";
+        while(firstName!="end")
+        {
+            if(firstName=="wypisz")
+            {
+                System.out.println(employees);
+                firstName = "sortuj";
+            }
+            if(firstName=="dodaj")
+            {
+                String x=scan.nextLine();
+                String t=scan.nextLine();
+                employees.put(x,t);
+                firstName = scan.nextLine();
+                continue;
+            }
+            if(firstName=="sortuj")
+            {
+                TreeMap<String,String> sorted = new TreeMap<>();
+                sorted.putAll(employees);
+                employees=sorted;
+                firstName = "wypisz";
+            }
+        }
+        System.out.println(firstName);
+        scan.close();
+    }
+}
+
+//zad 3 
+import java.util.*;
+public class priorityqueue {
+
+    public static class Student
+    {
+        String imie;
+        String ocena;
+        public Student(String imie,String ocena)
+        {
+            this.imie = imie;
+            this.ocena = ocena;
+            
+        }
+    }
+    public static void main(String args[])
+    {
+        Scanner scan = new Scanner(System.in);
+        Scanner scan2 = new Scanner(System.in);
+        Scanner scan3 = new Scanner(System.in);
+        Scanner scan4 = new Scanner(System.in);
+        Scanner scan5 = new Scanner(System.in);
+        Scanner scan6 = new Scanner(System.in);
+        int wybór;
+        HashMap<String, String> mapa = new HashMap<String, String>();
+        do{
+            System.out.print("1 Dodaj"+"\n");
+            System.out.print("2 Usuń"+"\n");
+            System.out.print("3 Zmień"+"\n");
+            System.out.print("4 Wypisz"+"\n");
+            System.out.print("5 Zakończ"+"\n");
+            wybór = scan.nextInt();
+            switch(wybór)
+            {
+                case 1:
+                String imie = scan2.nextLine();
+                String ocena = scan3.nextLine();
+                Student student = new Student(imie, ocena);
+                mapa.put(student.imie,student.ocena);
+                break;        
+                case 2:
+                String imie2 = scan4.nextLine();
+                mapa.remove(imie2);
+                break;
+                case 3:
+                String imie3 = scan5.nextLine();
+                String ocena2 = scan6.nextLine();
+                mapa.replace(imie3,ocena2);
+                break;               
+                case 4:
+                System.out.print(mapa+"\n");
+                break;
+                case 5: 
+            }      
+            }while(wybór!=5);
+        
+            scan.close(); 
+            scan2.close(); 
+            scan3.close(); 
+            scan4.close(); 
+            scan5.close(); 
+            scan6.close(); 
+    }
+}

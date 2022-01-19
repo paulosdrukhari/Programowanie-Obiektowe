@@ -1,1 +1,143 @@
+//zadanie 1 Paweł Deptuła 155257
+import java.util.*;
+/// na tym komputerze nie mogłem zrobic package
+class Autor implements Comparable<Autor>,Cloneable
+{
+    private String nazwa;
+    private String email;
+    private char plec;
 
+    public Autor(String nazwa,String email,char plec)
+    {
+        this.nazwa = nazwa;
+        this.email = email;
+        this.plec = plec;
+    }
+
+    public String getNazwa()
+    {
+        return this.nazwa;
+    }
+    public String getEmail()
+    {
+        return this.email;
+    }
+    public char getPlec()
+    {
+        return this.plec;
+    }
+    public void setNazwa(String nazwa)
+    {
+        this.nazwa=nazwa;
+    }
+    public void setEmail(String email)
+    {
+        this.email=email;
+    }
+    public void setPlec(String email)
+    {
+        this.email=email;
+    }
+    public int compareTo(Autor a) {
+        return this.nazwa.compareTo(a.nazwa)+ Character.toString(this.plec).compareTo(Character.toString(a.plec));//ale sie namyslalem nad tym ;d
+    }
+    public String toString()
+    {
+        String a = getClass().getName()+"[ Nazwisko= "+this.nazwa+" Email = "+this.email+" Plec = "+this.plec;
+        return a;
+    }
+}
+
+class Ksiazka implements Comparable<Ksiazka>,Cloneable
+{
+    private String tytul;
+    private String autor;
+    private double cena;
+
+    public Ksiazka(String tytul,String autor,double cena)
+    {
+        this.tytul = tytul;
+        this.autor = autor;
+        this.cena = cena;
+    }
+
+    public int compareTo(Ksiazka a)
+    {
+        return this.autor.compareTo(a.autor)+this.tytul.compareTo(a.tytul)+Double.compare(this.cena,a.cena);
+    }
+
+    public String toString()
+    {
+        String a =getClass().getName()+"[Nazwisko = "+this.autor+" Tytul = "+this.tytul+" Cena = "+this.cena;
+        return a;
+    }
+}
+
+
+public class Main {
+
+
+    public static void main(String[] args) {
+        ArrayList<Autor> grupa = new ArrayList<Autor>();
+        char a='k';
+        char b='m';
+        grupa.add(new Autor("Kowalski", "zada", a));
+        grupa.add(new Autor("Zych", "zar@pl.", a));
+        grupa.add(new Autor("Klops", "zdu", b));
+        grupa.add(new Autor("Jech", "ara", b));
+        ///test comparatora
+        Autor h=new Autor("Kowal","zada", b);
+        Autor y=new Autor("Kowal","zada", a);
+        System.out.println("test comparatora");
+        System.out.println(y.compareTo(h));
+        System.out.println(grupa);
+        Collections.sort(grupa);
+        System.out.println(grupa);
+        ArrayList<Ksiazka> aw = new ArrayList<Ksiazka>();
+        aw.add(new Ksiazka("hory","poter",11.22));
+        aw.add(new Ksiazka("Woclal","yra",55));
+        aw.add(new Ksiazka("cyber","war",33));
+        aw.add(new Ksiazka("miasto","lolaj",11));
+        aw.add(new Ksiazka("Polska naszych marzen","Kaczor",2));
+        aw.add(new Ksiazka("Moja walka","austryjak",121));
+        System.out.println(aw);
+        Collections.sort(aw);
+        System.out.println(aw);
+    }
+}
+
+
+//zad 2 
+
+Paweł Deptuła
+//zad 2 
+import java.util.LinkedList;
+
+public class Main {
+    public static void main(String[] args) {
+        LinkedList<String> cars = new LinkedList<String>();
+        cars.add("w");
+        cars.add("a");
+        cars.add("s");
+        cars.add("d");
+        cars.add("t");
+        cars.add("y");
+        cars.add("q");
+        cars.add("p");
+        System.out.println(cars);
+        redukuj(cars,2);
+        System.out.println(cars);
+    }
+    static void redukuj(LinkedList <String> books,int n)
+    {
+        int a=0;
+        for (int i = 0; i < books.size(); i++) {
+            a+=1;
+            if(a==n)
+            {
+                books.remove(i);
+                a=0;
+            }
+        }
+    }
+}
